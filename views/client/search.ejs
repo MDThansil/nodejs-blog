@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-between border-bottom pb-3">
+  <span>Search result for : <b><%= query %></b></span>
+  <span
+    >Total Result : <%= (typeof totalResult != 'undefined') ? totalResult : 0
+    %></span
+  >
+</div>
+
+<div class="row mt-3">
+  <% Array(20).fill().forEach((item) => { %> <%-
+  include('partials/blog-item.ejs') %> <% }) %>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 offset-lg-3 text-center">
+    <div class="pagination">
+      <a href="?page=1">&lt;&lt;</a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">&gt;&gt;</a>
+    </div>
+  </div>
+</div>

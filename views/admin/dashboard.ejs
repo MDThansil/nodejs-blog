@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-between mt-3">
+  <h5>Posts</h5>
+  <a href="#" class="btn btn-primary"
+    ><i class="fa fa-plus"></i>&ensp;Add new post</a
+  >
+</div>
+
+<div class="">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Views</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Array(10).fill().forEach(item => { %>
+      <tr>
+        <td>1</td>
+        <td>Lorem, ipsum dolor.</td>
+        <td>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
+          facilis quaerat quod nisi tenetur laudantium.
+        </td>
+        <td>100</td>
+        <td>
+          <div class="d-flex flex-shrink-0">
+            <a href="#" class="btn btn-warning me-2"
+              ><i class="fa fa-edit"></i>&ensp;Edit</a
+            >
+            <a href="#" class="btn btn-danger"
+              ><i class="fa fa-trash"></i>&ensp;Delete</a
+            >
+          </div>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

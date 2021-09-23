@@ -1,0 +1,17 @@
+<header class="header">
+  <div class="container">
+    <h1><a href="/">MT-Blogs</a></h1>
+    <form action="/search" method="GET" class="search-form">
+      <div>
+        <input
+          type="text"
+          required
+          value="<%= (typeof query != 'undefined') ? query : '' %>"
+          name="q"
+          placeholder="Search blogs here..."
+        />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+    </form>
+  </div>
+</header>

@@ -1,0 +1,61 @@
+<div class="row mt-5">
+  <div class="col-lg-4 offset-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title text-center">Register</h3>
+        <%- include('partials/message.ejs') %>
+        <form action="/admin/register" method="POST">
+          <div>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Name"
+              name="name"
+              value="<%= typeof name != 'undefined'? name : '' %>"
+            />
+          </div>
+          <div class="mt-3">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Email Address"
+              name="email"
+              value="<%= typeof email != 'undefined'? email : '' %>"
+            />
+          </div>
+          <div class="mt-3">
+            <label for="passowrd">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+              name="password"
+              value="<%= typeof password != 'undefined'? password : '' %>"
+            />
+          </div>
+          <div class="mt-3">
+            <label for="password2">Confirm Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password2"
+              placeholder="Confirm Password"
+              name="password2"
+              value="<%= typeof password2 != 'undefined'? password2 : '' %>"
+            />
+          </div>
+          <div class="mt-3">
+            <button type="submit" class="btn btn-success w-100">
+              <i class="fa fa-user-plus"></i>&ensp;Register
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
